@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -p|grep -v/
+ls -d . .. * | LC_COLLATE=C sort -d -k1.1 | sed ':a;N;$!ba;s/\n/,/g' ; echo
